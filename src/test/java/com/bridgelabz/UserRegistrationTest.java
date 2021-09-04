@@ -9,8 +9,9 @@ import java.util.regex.Pattern;
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserRegistrationTest {
-    public static void main(String[] args) {
-        System.out.println("welcome to regular expression program");
-
+    public void givenFirstname_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.firstname("Shivraj");
+        assertTrue(result);
     }
 }
