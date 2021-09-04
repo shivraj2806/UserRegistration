@@ -7,11 +7,17 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class UserRegistrationTest {
+    @Test
     public void givenFirstname_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
         boolean result = nameValidation.firstname("Shivraj");
+        assertTrue(result);
+    }
+    @Test
+    public void givenLastname_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.lastname("Jadhav");
         assertTrue(result);
     }
 }
