@@ -15,7 +15,6 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
-
     public boolean lastname(String lastName) {
         String last_name_pattern = "^[A-Z]{1}[a-z A-Z]{2,}$";
         Pattern pattern = Pattern.compile(last_name_pattern);
@@ -27,7 +26,6 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
-
     public boolean phoneNum(String phonenum) {
         String phoneNum_pattern = "^91 [1-9][0-9]{9}";
         Pattern pattern = Pattern.compile(phoneNum_pattern);
@@ -39,7 +37,6 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
-
     public boolean passWord(String password) {
         String passWord_pattern = "[a-z A-Z]{8,}$";
         Pattern pattern = Pattern.compile(passWord_pattern);
@@ -51,7 +48,6 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
-
     public boolean uppercasePassWord(String password) {
         String uppercasePassWord_pattern = "((?=.*[A-Z]))[a-z A-Z].{7,}$";
         Pattern pattern = Pattern.compile(uppercasePassWord_pattern);
@@ -63,7 +59,6 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
-
     public boolean numericPassWord(String password) {
         String numericPassWord_pattern = "(?=.*[0-9])(?=.*[A-Z])[a-z A-Z].{7,}$";
         Pattern pattern = Pattern.compile(numericPassWord_pattern);
@@ -83,6 +78,17 @@ public class UserRegistration {
             System.out.println("The Given Special Character passWord Is Valid");
         } else {
             System.out.println("The Given Special Character  passWord Is Not Valid");
+        }
+        return matcher.matches();
+    }
+    public boolean eMail(String email) {
+        String email_pattern = "^[a-zA-Z0-9]+[-.+]?[a-z0-9]*@[a-z0-9]+[.][a-z]{2,3}[.]?[a-z]{0,3}$";
+        Pattern pattern = Pattern.compile(email_pattern);
+        Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            System.out.println("The Given email Is Valid");
+        } else {
+            System.out.println("The Given email Is Not Valid");
         }
         return matcher.matches();
     }

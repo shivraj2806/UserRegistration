@@ -52,5 +52,10 @@ class UserRegistrationTest {
         boolean result = nameValidation.specialCharacterPassWord("Mahi@07");
         assertTrue(result);
     }
-
+    @Test
+    public void given_Special_Character_PassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.eMail("shivjadhav2806@gmail.com");
+        assertTrue(result);
+    }
 }
