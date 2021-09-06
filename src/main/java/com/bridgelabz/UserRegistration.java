@@ -51,6 +51,7 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
+
     public boolean uppercasePassWord(String password) {
         String uppercasePassWord_pattern = "((?=.*[A-Z]))[a-z A-Z].{7,}$";
         Pattern pattern = Pattern.compile(uppercasePassWord_pattern);
@@ -63,5 +64,16 @@ public class UserRegistration {
         return matcher.matches();
     }
 
+    public boolean numericPassWord(String password) {
+        String numericPassWord_pattern = "(?=.*[0-9])(?=.*[A-Z])[a-z A-Z].{7,}$";
+        Pattern pattern = Pattern.compile(numericPassWord_pattern);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()) {
+            System.out.println("The Given Numeric passWord Is Valid");
+        } else {
+            System.out.println("The Given Numeric passWord Is Not Valid");
+        }
+        return matcher.matches();
+    }
 }
 

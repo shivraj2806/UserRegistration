@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-09-06T09:04:59" hostname="LAPTOP-8PVIRIUH" time="0.054">
+<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-09-06T09:16:54" hostname="LAPTOP-8PVIRIUH" time="0.054">
   <properties/>
-  <testcase name="givenPhoneNum_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.054">
+  <testcase name="givenUppercasePassWord_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.054">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:35)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:162)
-	at com.bridgelabz.UserRegistrationTest.givenPhoneNum_When_Valid_ShouldReturn_True(UserRegistrationTest.java:28)
+	at com.bridgelabz.UserRegistrationTest.givenUppercasePassWord_When_Valid_ShouldReturn_True(UserRegistrationTest.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,7 +100,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </failure>
   </testcase>
-  <system-out><![CDATA[The Given Phone Number Is Not Valid
+  <system-out><![CDATA[The Given Uppercase passWord Is Not Valid
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -40,5 +40,11 @@ class UserRegistrationTest {
         boolean result = nameValidation.uppercasePassWord("SHIVRAJ");
         assertTrue(result);
     }
+    @Test
+    public void givenNumericPassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.numericPassWord("4444");
+        assertTrue(result);
+    }
 
 }
