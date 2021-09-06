@@ -41,9 +41,15 @@ class UserRegistrationTest {
         assertTrue(result);
     }
     @Test
-    public void givenNumericPassWord_When_Valid_ShouldReturn_True() {
+    public void givenNumeric_PassWord_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
         boolean result = nameValidation.numericPassWord("4444");
+        assertTrue(result);
+    }
+    @Test
+    public void givenSpecial_CharacterPassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.specialCharacterPassWord("Mahi@07");
         assertTrue(result);
     }
 

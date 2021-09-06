@@ -75,5 +75,16 @@ public class UserRegistration {
         }
         return matcher.matches();
     }
+    public boolean specialCharacterPassWord(String password) {
+        String specialCharacterPassWord_pattern = "(?=.*[$@%&!*?])(?=.*[0-9])(?=.*[A-Z])[a-z A-Z].{7,}$";
+        Pattern pattern = Pattern.compile(specialCharacterPassWord_pattern);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()) {
+            System.out.println("The Given Special Character passWord Is Valid");
+        } else {
+            System.out.println("The Given Special Character  passWord Is Not Valid");
+        }
+        return matcher.matches();
+    }
 }
 
