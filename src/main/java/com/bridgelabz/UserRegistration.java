@@ -28,10 +28,10 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public boolean phoneNum(String phoneNum) {
+    public boolean phoneNum(String phonenum) {
         String phoneNum_pattern = "^91 [1-9][0-9]{9}";
         Pattern pattern = Pattern.compile(phoneNum_pattern);
-        Matcher matcher = pattern.matcher(phoneNum);
+        Matcher matcher = pattern.matcher(phonenum);
         if (matcher.matches()) {
             System.out.println("The Given Phone Number Is Valid");
         } else {
@@ -40,14 +40,25 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public boolean passWord(String passWord) {
+    public boolean passWord(String password) {
         String passWord_pattern = "[a-z A-Z]{8,}$";
         Pattern pattern = Pattern.compile(passWord_pattern);
-        Matcher matcher = pattern.matcher(passWord);
+        Matcher matcher = pattern.matcher(password);
         if (matcher.matches()) {
             System.out.println("The Given passWord Is Valid");
         } else {
             System.out.println("The Given passWord Is Not Valid");
+        }
+        return matcher.matches();
+    }
+    public boolean uppercasePassWord(String password) {
+        String uppercasePassWord_pattern = "((?=.*[A-Z]))[a-z A-Z].{7,}$";
+        Pattern pattern = Pattern.compile(uppercasePassWord_pattern);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()) {
+            System.out.println("The Given Uppercase passWord Is Valid");
+        } else {
+            System.out.println("The Given Uppercase passWord Is Not Valid");
         }
         return matcher.matches();
     }

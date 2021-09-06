@@ -24,7 +24,7 @@ class UserRegistrationTest {
     @Test
     public void givenPhoneNum_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.phoneNum("94368525655555");
+        boolean result = nameValidation.phoneNum("943685256");
         assertTrue(result);
     }
 
@@ -32,6 +32,12 @@ class UserRegistrationTest {
     public void givenPassWord_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
         boolean result = nameValidation.passWord("Shiv");
+        assertTrue(result);
+    }
+    @Test
+    public void givenUppercasePassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.uppercasePassWord("SHIVRAJ");
         assertTrue(result);
     }
 

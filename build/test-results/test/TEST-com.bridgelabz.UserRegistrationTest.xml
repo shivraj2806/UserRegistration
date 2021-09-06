@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-09-06T08:45:38" hostname="LAPTOP-8PVIRIUH" time="0.058">
+<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-09-06T09:04:59" hostname="LAPTOP-8PVIRIUH" time="0.054">
   <properties/>
-  <testcase name="givenPhoneNum_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.058">
+  <testcase name="givenPhoneNum_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.054">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
