@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-04T16:45:44" hostname="LAPTOP-8PVIRIUH" time="0.052">
+<testsuite name="com.bridgelabz.UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-06T07:53:44" hostname="LAPTOP-8PVIRIUH" time="0.492">
   <properties/>
-  <testcase name="givenFirstname_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.052"/>
+  <testcase name="givenLastname_When_Valid_ShouldReturn_True()" classname="com.bridgelabz.UserRegistrationTest" time="0.492"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

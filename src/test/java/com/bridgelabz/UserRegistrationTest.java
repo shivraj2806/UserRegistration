@@ -14,10 +14,17 @@ class UserRegistrationTest {
         boolean result = nameValidation.firstname("Shivraj");
         assertTrue(result);
     }
+
     @Test
     public void givenLastname_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
         boolean result = nameValidation.lastname("Jadhav");
+        assertTrue(result);
+    }
+
+    public void givenPhoneNum_When_Valid_ShouldReturn_True() {
+        UserRegistration nameValidation = new UserRegistration();
+        boolean result = nameValidation.phoneNum("9436852565");
         assertTrue(result);
     }
 }

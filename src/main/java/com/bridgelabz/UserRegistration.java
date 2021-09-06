@@ -17,5 +17,11 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(lastName);
         return matcher.matches();
     }
+    public  boolean phoneNum(String phoneNum) {
+        String phoneNum_pattern =  "^91 [1-9][0-9]{9}";
+        Pattern pattern = Pattern.compile(phoneNum_pattern);
+        Matcher matcher = pattern.matcher(phoneNum);
+        return matcher.matches();
+    }
 }
 
