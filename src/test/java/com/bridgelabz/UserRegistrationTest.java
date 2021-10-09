@@ -11,9 +11,10 @@ class UserRegistrationTest {
     @Test
     public void givenFirstname_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.firstname("Shivraj");
+        boolean result = nameValidation.firstname("Jadhav");
         assertTrue(result);
     }
+
 
     @Test
     public void givenLastname_When_Valid_ShouldReturn_True() {
@@ -58,4 +59,5 @@ class UserRegistrationTest {
         boolean result = nameValidation.eMail("shivjadhav2806@gmail.com");
         assertTrue(result);
     }
+
 }
