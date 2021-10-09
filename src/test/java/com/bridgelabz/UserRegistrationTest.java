@@ -1,63 +1,127 @@
 package com.bridgelabz;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
 class UserRegistrationTest {
     @Test
     public void givenFirstname_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.firstname("Jadhav");
-        assertTrue(result);
+        try {
+            boolean result = nameValidation.firstname("Shivraj");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_NAME, "Enter Correct First Name");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
-
 
     @Test
     public void givenLastname_When_Valid_ShouldReturn_True() {
         UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.lastname("Jadhav");
-        assertTrue(result);
+        try {
+            boolean result = nameValidation.lastname("Jadhav");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_NAME, "Enter Correct Last Name");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
+
     @Test
-    public void givenPhoneNum_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.phoneNum("943685256");
-        assertTrue(result);
+    public void givenPhoneNumber_When_Valid_ShouldReturn_True() {
+        UserRegistration phoneValidation = new UserRegistration();
+        try {
+            boolean result = phoneValidation.phoneNum("9222583656");
+            if (result) {
+                assertTrue((result));
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_PHONE_NUMBER, "Enter Correct Phone Number");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void givenPassWord_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.passWord("Shiv");
-        assertTrue(result);
+        UserRegistration passWordValidation = new UserRegistration();
+        try {
+            boolean result = passWordValidation.passWord("SHIVRAJJADHAV");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_PASSWORD, "Enter Correct Password");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
+
     @Test
     public void givenUppercasePassWord_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.uppercasePassWord("SHIVRAJ");
-        assertTrue(result);
+        UserRegistration passWordValidation = new UserRegistration();
+        try {
+            boolean result = passWordValidation.uppercasePassWord("shivJaDh");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_PASSWORD, "Enter Correct Password");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
+
     @Test
-    public void givenNumeric_PassWord_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.numericPassWord("4444");
-        assertTrue(result);
+    public void givenNumericPassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration passWordValidation = new UserRegistration();
+        try {
+            boolean result = passWordValidation.numericPassWord("Shiv28j");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_PASSWORD, "Enter Correct Password");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
+
     @Test
-    public void givenSpecial_CharacterPassWord_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.specialCharacterPassWord("Mahi@07");
-        assertTrue(result);
+    public void givenSpecialCharPassWord_When_Valid_ShouldReturn_True() {
+        UserRegistration passWordValidation = new UserRegistration();
+        try {
+            boolean result = passWordValidation.specialCharacterPassWord("Shiv@123");
+            if (result) {
+                assertTrue(result);
+            } else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_PASSWORD, "Enter Correct Password");
+            }
+        } catch (UserRegistrationException e) {
+            e.printStackTrace();
+        }
     }
+
     @Test
-    public void given_Special_Character_PassWord_When_Valid_ShouldReturn_True() {
-        UserRegistration nameValidation = new UserRegistration();
-        boolean result = nameValidation.eMail("shivjadhav2806@gmail.com");
-        assertTrue(result);
-    }
+    public void givenEmail_When_Valid_ShouldReturn_True() {
+        UserRegistration emailValidation = new UserRegistration();
+        try {
+            boolean result = emailValidation.eMail("shivjadhav2806@.com");
+            if (result) {
+                assertTrue(result);
+            }else {
+                throw new UserRegistrationException(UserRegistrationException.ExceptionType.ENTERED_INVALID_EMAIL,"Enter Correct Email");
+            }
+        }catch (UserRegistrationException e){
+            e.printStackTrace();
+        }
+}
 
 }
